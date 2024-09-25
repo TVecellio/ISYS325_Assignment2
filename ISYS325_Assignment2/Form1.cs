@@ -96,12 +96,14 @@ namespace ISYS325_Assignment2
                 {
                     features = "no features";
                 }
-
+                sumLabel.ForeColor = Color.Black;
                 sumLabel.Text = $"You have purchased a {color} {year} {mamoListBox.SelectedItem.ToString()} with {features}.";
             }
             catch (Exception ex)
             {
+                sumLabel.ForeColor = Color.Red;
                 sumLabel.Text = "Invalid input, there seems to be an issue with the " + ex.Message;
+                
             }
                
         }
